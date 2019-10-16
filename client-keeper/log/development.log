@@ -48,3 +48,158 @@ Migrating to CreateClients (20191012194522)
   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mClient Load (0.5ms)[0m  [1m[34mSELECT "clients".* FROM "clients" LIMIT $1[0m  [["LIMIT", 11]]
   [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/clients" for ::1 at 2019-10-16 13:58:04 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (0.5ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/controllers/clients_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 10.0ms | ActiveRecord: 4.1ms | Allocations: 10320)
+
+
+Started GET "/clients" for ::1 at 2019-10-16 13:59:25 -0500
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/controllers/clients_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 146ms (Views: 27.4ms | ActiveRecord: 2.9ms | Allocations: 81198)
+
+
+  
+NameError (undefined local variable or method `clients' for #<ClientsController:0x00007fb04e9ff488>
+Did you mean?  clients_url):
+  
+app/controllers/clients_controller.rb:5:in `index'
+Started GET "/clients" for ::1 at 2019-10-16 13:59:46 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (0.5ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/controllers/clients_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 184ms (Views: 10.8ms | ActiveRecord: 3.6ms | Allocations: 81773)
+
+
+  
+NameError (undefined local variable or method `clients' for #<ClientsController:0x00007fe2feca6eb0>
+Did you mean?  clients_url):
+  
+app/controllers/clients_controller.rb:5:in `index'
+Started GET "/clients" for ::1 at 2019-10-16 14:00:41 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (0.4ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/controllers/clients_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 166ms (Views: 10.4ms | ActiveRecord: 3.7ms | Allocations: 81776)
+
+
+  
+NameError (undefined local variable or method `client' for #<ClientsController:0x00007fb5189879c8>
+Did you mean?  client_url):
+  
+app/controllers/clients_controller.rb:5:in `index'
+Started GET "/clients" for ::1 at 2019-10-16 14:01:00 -0500
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/controllers/clients_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 157ms (Views: 9.6ms | ActiveRecord: 2.7ms | Allocations: 81295)
+
+
+  
+NameError (undefined local variable or method `clients' for #<ClientsController:0x00007fb519348958>
+Did you mean?  clients_url):
+  
+app/controllers/clients_controller.rb:5:in `index'
+Started GET "/clients" for ::1 at 2019-10-16 14:01:38 -0500
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/controllers/clients_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 13ms (Views: 9.4ms | ActiveRecord: 2.5ms | Allocations: 9870)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/clients_controller.rb:5:in `index'
+Started GET "/clients" for ::1 at 2019-10-16 14:02:10 -0500
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/controllers/clients_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 168ms (Views: 9.2ms | ActiveRecord: 3.0ms | Allocations: 81198)
+
+
+  
+NameError (undefined local variable or method `clients' for #<ClientsController:0x00007fb519283220>
+Did you mean?  clients_url):
+  
+app/controllers/clients_controller.rb:5:in `index'
+Started GET "/clients" for ::1 at 2019-10-16 14:02:20 -0500
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/controllers/clients_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 21ms (Views: 17.0ms | ActiveRecord: 3.1ms | Allocations: 9859)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/clients_controller.rb:5:in `index'
+Started GET "/clients" for ::1 at 2019-10-16 14:02:20 -0500
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/controllers/clients_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 2854)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/clients_controller.rb:5:in `index'
+Started GET "/clients" for ::1 at 2019-10-16 14:03:05 -0500
+Processing by ClientsController#index as HTML
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/controllers/clients_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 2.6ms | Allocations: 9737)
+
+
+Started GET "/clients/1" for ::1 at 2019-10-16 14:04:29 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/clients_controller.rb:9:in `show'
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 3.7ms | Allocations: 8189)
+
+
+Started GET "/clients/1" for ::1 at 2019-10-16 14:05:09 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.5ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/clients_controller.rb:9:in `show'
+Completed 500 Internal Server Error in 127ms (Views: 0.3ms | ActiveRecord: 3.0ms | Allocations: 79372)
+
+
+  
+NameError (undefined local variable or method `client' for #<ClientsController:0x00007fb51b9dabc0>
+Did you mean?  client_url):
+  
+app/controllers/clients_controller.rb:10:in `show'
+Started GET "/clients/1" for ::1 at 2019-10-16 14:05:20 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/clients_controller.rb:9:in `show'
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 2.4ms | Allocations: 7864)
+
+
+Started GET "/clients/1" for ::1 at 2019-10-16 14:06:17 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/clients_controller.rb:10:in `show'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 2.9ms | Allocations: 7879)
+
+
+Started GET "/clients/4" for ::1 at 2019-10-16 14:06:28 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mClient Load (0.4ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/clients_controller.rb:10:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 786)
+
+
