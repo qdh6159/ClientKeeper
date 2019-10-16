@@ -1,0 +1,50 @@
+Started GET "/" for ::1 at 2019-10-12 14:34:34 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/quincyhicks/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/quincyhicks/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.4ms | Allocations: 489)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 2700)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7819702123718173500)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateClients (20191012194522)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE TABLE "clients" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "street" character varying, "city" character varying, "state" character varying, "zip" character varying, "social" character varying, "rating" character varying, "last_contact" character varying, "notes" character varying)[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191012194522"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7819702123718173500)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClient Create (11.1ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "street", "city", "state", "zip", "social", "rating", "last_contact", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Hubert"], ["last_name", "Lemke"], ["street", "6090 Tillman Views"], ["city", "Port Whitney"], ["state", "Illinois"], ["zip", "23062-2309"], ["social", "7457"], ["rating", "1"], ["last_contact", "2017-11-14"], ["notes", "Fugit nihil eos. Dolor et sequi. Quo distinctio voluptas. Ullam unde nam."]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClient Create (0.2ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "street", "city", "state", "zip", "social", "rating", "last_contact", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Clark"], ["last_name", "Rutherford"], ["street", "6432 Kurt Walks"], ["city", "East Tim"], ["state", "Utah"], ["zip", "09457"], ["social", "5119"], ["rating", "4"], ["last_contact", "2019-01-29"], ["notes", "Facilis nihil ipsum. Deleniti sit aliquam. Quia eius in. Voluptatum repellendus quidem."]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClient Create (0.2ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "street", "city", "state", "zip", "social", "rating", "last_contact", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Michell"], ["last_name", "Johns"], ["street", "77479 Genevie Heights"], ["city", "South Ahmadview"], ["state", "South Dakota"], ["zip", "30041"], ["social", "7134"], ["rating", "4"], ["last_contact", "2019-08-27"], ["notes", "Incidunt ea velit. Eaque veniam repudiandae. Unde aperiam earum. Temporibus ut quia."]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClient Create (0.2ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "street", "city", "state", "zip", "social", "rating", "last_contact", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Antione"], ["last_name", "Cartwright"], ["street", "6692 Rowena Ramp"], ["city", "North Frederick"], ["state", "Mississippi"], ["zip", "19438"], ["social", "8712"], ["rating", "2"], ["last_contact", "2018-09-05"], ["notes", "Repellat quas veniam. Commodi beatae itaque. Repudiandae omnis eaque. Perferendis qui quia."]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClient Create (0.2ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "street", "city", "state", "zip", "social", "rating", "last_contact", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "James"], ["last_name", "Nader"], ["street", "59375 O'Reilly Rapid"], ["city", "Jonesburgh"], ["state", "New Jersey"], ["zip", "39522"], ["social", "5260"], ["rating", "4"], ["last_contact", "2018-07-26"], ["notes", "Molestiae soluta asperiores. Nesciunt aut numquam. Laboriosam quis non. Ea iste est."]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClient Create (0.2ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "street", "city", "state", "zip", "social", "rating", "last_contact", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Danae"], ["last_name", "Ledner"], ["street", "30801 Judy Junction"], ["city", "North Tobyville"], ["state", "Nevada"], ["zip", "01013"], ["social", "4200"], ["rating", "4"], ["last_contact", "2018-11-18"], ["notes", "Hic qui fugiat. Aperiam ea sit. Consequuntur totam fugiat. Autem aut sunt."]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClient Create (1.0ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "street", "city", "state", "zip", "social", "rating", "last_contact", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Darin"], ["last_name", "Schulist"], ["street", "302 Terra Bypass"], ["city", "Rupertville"], ["state", "North Carolina"], ["zip", "42339-7043"], ["social", "3344"], ["rating", "4"], ["last_contact", "2018-03-10"], ["notes", "Voluptatem est ut. Et nihil et. Perspiciatis minima voluptatibus. Fugit sit voluptas."]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClient Create (0.2ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "street", "city", "state", "zip", "social", "rating", "last_contact", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Raymon"], ["last_name", "Hermann"], ["street", "9154 Evelin Summit"], ["city", "Idellborough"], ["state", "Illinois"], ["zip", "42180-2795"], ["social", "6028"], ["rating", "2"], ["last_contact", "2019-01-06"], ["notes", "In illo qui. Atque similique est. Et cupiditate non. Explicabo repellat earum."]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClient Create (0.2ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "street", "city", "state", "zip", "social", "rating", "last_contact", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Waylon"], ["last_name", "Legros"], ["street", "61606 Tracy Drive"], ["city", "Parkerhaven"], ["state", "Utah"], ["zip", "15932"], ["social", "2764"], ["rating", "3"], ["last_contact", "2019-07-28"], ["notes", "Molestiae ea quas. Reiciendis molestias et. Eum similique aut. Aut tenetur quo."]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClient Create (0.2ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "street", "city", "state", "zip", "social", "rating", "last_contact", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["first_name", "Arnette"], ["last_name", "Romaguera"], ["street", "119 Ann Mills"], ["city", "Russfort"], ["state", "Idaho"], ["zip", "88513"], ["social", "2915"], ["rating", "4"], ["last_contact", "2017-12-01"], ["notes", "Hic autem ducimus. Magnam minus voluptates. Aut dignissimos itaque. Error et quia."]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mClient Load (0.5ms)[0m  [1m[34mSELECT "clients".* FROM "clients" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
