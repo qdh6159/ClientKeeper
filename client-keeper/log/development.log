@@ -203,3 +203,33 @@ Processing by ClientsController#show as HTML
 Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 786)
 
 
+Started GET "/clients" for ::1 at 2019-10-17 11:42:59 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientsController#index as */*
+  [1m[36mClient Load (4.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/controllers/clients_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 15.0ms | ActiveRecord: 7.7ms | Allocations: 10322)
+
+
+Started GET "/clients" for ::1 at 2019-10-17 11:43:32 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientsController#index as */*
+  [1m[36mClient Load (0.5ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/controllers/clients_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 15.4ms | ActiveRecord: 3.9ms | Allocations: 10323)
+
+
+Started GET "/clients" for ::1 at 2019-10-17 11:52:50 -0500
+Processing by ClientsController#index as */*
+  [1m[36mClient Load (1.5ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/controllers/clients_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 1.5ms | Allocations: 2788)
+
+
+Started GET "/clients" for ::1 at 2019-10-17 11:54:52 -0500
+Processing by ClientsController#index as */*
+  [1m[36mClient Load (0.4ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/controllers/clients_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 2752)
+
+
