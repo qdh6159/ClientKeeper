@@ -9,5 +9,11 @@ class ClientsController < ApplicationController
         puts params
         render json: Client.find(params[:id])
         # render json: {status: 200, client: client}
+    end
+
+    def create
+        render json: Client.create(clients_path)
       end
+
+
 end

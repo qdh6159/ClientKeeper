@@ -33,31 +33,30 @@ class MainContainer extends Component {
     }
     createPlant = async (formData) => {
         console.log(formData)
-        try{
-            const newPlant = await fetch("http://localhost:9000/plants", {
+        
+            const newPlant = await fetch("http://localhost:3001/clients", {
                 method: "POST",
                 body: JSON.stringify(formData),
-                credentials: "include",
+                // credentials: "include",
                 headers: {
                     "Content-Type": "application/json",
                     
                 }
             })
             const parsedResponse = await newPlant.json();
-            if(parsedResponse.status.code === 201){
-                this.setState({
-                    plants: [...this.state.plants, parsedResponse.data]
-                })
-            }
-            console.log("********************")
-            console.log(this.state)
-        }catch(err) {
-
-        }
+            this.setState({
+                clients: [...this.state.clients, parsedResponse.data]
+            })
+        
+        console.log("********************")
+        console.log(this.state)
     }
     render(){
+
+        console.log(this.state.clients)
         const clients = this.state.clients.map((clients)=>{
-            return <div key={clients.id}> 
+            return (
+                <div key={clients.id}> 
                 {/* <h3>{clients.first_name} {clients.last_name}</h3> */}
                 <Card style={{ maxWidth: "300px" }, {small: true}}>
                 <CardHeader>{clients.first_name} {clients.last_name}</CardHeader>
@@ -74,6 +73,7 @@ class MainContainer extends Component {
                 <CardFooter>Call</CardFooter>
                 </Card>
             </div>
+            );
         })
         return(
             <div class="clientList">
