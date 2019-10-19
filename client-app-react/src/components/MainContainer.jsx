@@ -1,6 +1,6 @@
 import React, { Component} from 'react'
 import PlantList from "./PlantList/PlantList"
-import PlantNav from "./nav"
+import ClientNav from "./nav"
 import {
     Card,
     CardHeader,
@@ -31,30 +31,30 @@ class MainContainer extends Component {
             clients: parsedResponse
         })
     }
-    // createPlant = async (formData) => {
-    //     console.log(formData)
-    //     try{
-    //         const newPlant = await fetch("http://localhost:9000/plants", {
-    //             method: "POST",
-    //             body: JSON.stringify(formData),
-    //             credentials: "include",
-    //             headers: {
-    //                 "Content-Type": "application/json",
+    createPlant = async (formData) => {
+        console.log(formData)
+        try{
+            const newPlant = await fetch("http://localhost:9000/plants", {
+                method: "POST",
+                body: JSON.stringify(formData),
+                credentials: "include",
+                headers: {
+                    "Content-Type": "application/json",
                     
-    //             }
-    //         })
-    //         const parsedResponse = await newPlant.json();
-    //         if(parsedResponse.status.code === 201){
-    //             this.setState({
-    //                 plants: [...this.state.plants, parsedResponse.data]
-    //             })
-    //         }
-    //         console.log("********************")
-    //         console.log(this.state)
-    //     }catch(err) {
+                }
+            })
+            const parsedResponse = await newPlant.json();
+            if(parsedResponse.status.code === 201){
+                this.setState({
+                    plants: [...this.state.plants, parsedResponse.data]
+                })
+            }
+            console.log("********************")
+            console.log(this.state)
+        }catch(err) {
 
-    //     }
-    // }
+        }
+    }
     render(){
         const clients = this.state.clients.map((clients)=>{
             return <div key={clients.id}> 
@@ -77,7 +77,7 @@ class MainContainer extends Component {
         })
         return(
             <div class="clientList">
-                <PlantNav />
+                <ClientNav createPlant= {this.createPlant} />
                 <p class="dash">ClientKeeper Dashboard :)</p>
                 <br></br>
                 {clients}

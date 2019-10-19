@@ -12,14 +12,10 @@ export default class BasicModalExample extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      open: false,
-      name: "test",
-      scientificName: "",
-      water: "", 
-      sun: "",
-      description: "",
-      imageOne: "https://edge.bonnieplants.com/www/uploads/20180920002445/organic-rosemary-web.jpg", 
-      imageTwo: "",
+      first_name: false,
+      last_name: "",
+      last_contact: "",
+      notes: ""
      };
     this.toggle = this.toggle.bind(this);
   }
@@ -57,22 +53,22 @@ export default class BasicModalExample extends React.Component {
 
                         
                         <FormGroup>
-                            <label htmlFor="name">First Name</label>
-                            <FormInput onChange={this.handleChange} name="name" id="name" placeholder="First Name" />
+                            <label htmlFor="first_name">First Name</label>
+                            <FormInput onChange={this.handleChange} name="first_name" id="first_name" placeholder="First Name" />
                         </FormGroup>
                 
                         <FormGroup>
-                            <label htmlFor="scientificName">Last Name</label>
-                        <FormInput onChange={this.handleChange} name="scientificName" id="scientificName" placeholder="Last Name" />                       
+                            <label htmlFor="last_name">Last Name</label>
+                        <FormInput onChange={this.handleChange} name="last_name" id="last_name" placeholder="Last Name" />                       
                         </FormGroup>
 
                         
                         
 
-                        <FormGroup>
+                        {/* <FormGroup>
                             <label htmlFor="water">Portfolio Value</label>
                             <FormInput onChange={this.handleChange} name="water" id="water" placeholder="Portfolio Value" />
-                        </FormGroup>
+                        </FormGroup> */}
 
                              
                         
@@ -80,8 +76,8 @@ export default class BasicModalExample extends React.Component {
                         
 
                         <FormGroup>
-                        <label htmlFor="description">Notes</label>
-                        <FormTextarea size="lg" onChange={this.handleChange} name="description" placeholder="Notes"/> 
+                        <label htmlFor="notes">Notes</label>
+                        <FormTextarea size="lg" onChange={this.handleChange} name="notes" placeholder="Notes"/> 
                         </FormGroup>
 
                         
@@ -89,8 +85,8 @@ export default class BasicModalExample extends React.Component {
 
                         
                         <FormGroup>
-                            <label htmlFor="imageOne">Last Contact</label>
-                            <FormInput onChange={this.handleChange} type="text" name="imageOne" id="imageOne" placeholder="Last Contact" />
+                            <label htmlFor="last_contact">Last Contact</label>
+                            <FormInput onChange={this.handleChange} type="text" name="last_contact" id="last_contact" placeholder="Last Contact" />
                         </FormGroup>
                         
 

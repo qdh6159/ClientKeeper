@@ -5,7 +5,7 @@ import { Button, ButtonGroup, Modal, ModalBody, ModalHeader } from "shards-react
 import BasicModalExample from "./Component"
 
 
-export default function PlantNav(props) {
+export default function ClientNav(props) {
     return (
         <div>
         <Nav>
