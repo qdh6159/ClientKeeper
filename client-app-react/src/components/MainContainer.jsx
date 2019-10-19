@@ -62,15 +62,15 @@ class MainContainer extends Component {
                 <CardHeader>{clients.first_name} {clients.last_name}</CardHeader>
                 <CardImg src="https://149351035.v2.pressablecdn.com/wp-content/uploads/2014/08/RVSB_Chart.png" />
                 <CardBody>
-                    <CardTitle> Portfolio Value: $100,000.24  :)</CardTitle>
+                    <CardTitle> Portfolio Value: $2,330,000.24 😄</CardTitle>
                     <p>Last contact: {clients.last_contact}</p>
                     <ButtonGroup size="sm">
-                    <Button>Portfolio</Button>
-                    <Button>Update</Button>
-                    <Button>Delete</Button>
+                    <Button theme="success">Portfolio</Button>
+                    <Button theme="secondary">Buy/Sell</Button>
+                    <Button outline theme="warning">+Watch</Button>
                     </ButtonGroup>
                 </CardBody>
-                <CardFooter>Call</CardFooter>
+                <CardFooter class="call" outline={true}><Button block>📲 Call</Button></CardFooter>
                 </Card>
             </div>
             );
